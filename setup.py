@@ -10,7 +10,7 @@ with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
     
 setup(
-    name='ablang2',
+    name='ablang2_official',
     version='0.2.1',
     license='BSD 3-clause license',
     description='AbLang2: An antibody-specific language model focusing on NGL prediction.',
