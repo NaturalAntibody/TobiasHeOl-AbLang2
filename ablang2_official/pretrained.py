@@ -18,12 +18,12 @@ class pretrained(AbEncoding, AbRestore, AbAlignment, AbScores):
     Initializes AbLang for heavy or light chains.    
     """
     
-    def __init__(self, local_model_folder, ncpu = 1, device = 'cpu'):
+    def __init__(self, local_model_dir, ncpu = 1, device = 'cpu'):
         super().__init__()
         
         self.used_device = torch.device(device)
         
-        self.AbLang, self.tokenizer, self.hparams = load_model(local_model_folder, device=self.used_device)
+        self.AbLang, self.tokenizer, self.hparams = load_model(local_model_dir, device=self.used_device)
         self.AbLang.to(self.used_device)
         self.AbLang.eval() # Default 
         self.AbRep = self.AbLang.AbRep
