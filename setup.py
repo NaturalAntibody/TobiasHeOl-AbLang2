@@ -10,7 +10,7 @@ with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
     
 setup(
-    name='ablang2',
+    name='ablang2_official',
     version='0.2.1',
     license='BSD 3-clause license',
     description='AbLang2: An antibody-specific language model focusing on NGL prediction.',
@@ -21,7 +21,7 @@ setup(
     maintainer_email='tobiasheol@gmail.com',
     url="",
     include_package_data=True,
-    packages=find_packages(include=('ablang2', 'ablang2.*')),
+    packages=find_packages(include=('ablang2_official', 'ablang2_official.*')),
     install_requires=[
         'torch>1.9',
         'requests',
